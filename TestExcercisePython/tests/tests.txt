@@ -1,0 +1,18 @@
+POSITIVE TESTS:
+PASS - Delete file from source - dissapears from replica at sync, log and terminal message
+PASS - Delete file from replica - reappears in replica at sync, log and terminal message
+PASS - Update file in source - same file in replica changes at sync, log and terminal message
+PASS - Update file in replica - replaced by original at sync, log and terminal message
+PASS - Add file to source - syncs to replica at sync, log and terminal message
+PASS - Add file to replica - deletes from replica at sync, log and terminal message
+PASS - Add sub-folder to source - syncs to replica at sync, log and terminal message
+PASS - modify file in sub folder, syncs to replica, log and terminal message
+PASS - Add file to sub folder in source - syncs to replica at sync, log and terminal message
+PASS - Add sub-folder to sub-folder in source - syncs to replica at sync, log and terminal message
+PASS - Invalid source path in command line, continues as normal when valid path is provided within the program
+
+NEGATIVE TESTS:
+PASS - Too many arguments - Error, should print "Invalid argument count."
+PASS - Too few arguments - Error, should print "Invalid argument count."
+PASS - Incorrect character - with String as input for interval, should print "Invalid character."
+PASS - Incorrect path - Prompt for another path, should keep prompting if user inputs invalid path again
